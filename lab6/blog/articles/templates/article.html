@@ -1,0 +1,24 @@
+<html>
+<body>
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+</head>
+    <div class="article">
+        <img src="https://media.tenor.com/images/1170597818a37a7c6e3e1d4baeb6e2eb/tenor.gif" alt="loading">
+        <h3><a href="/">Все статьи</a></h3><br>
+
+    </div>
+    <div style="height:50px; position:absolute; right:150px; top:8px;"><h3><a href="/signup">Регистрация</a></h3></div>
+      <div class="achieve">
+               <div class="one-post">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    <div class="article-info">
+                         <h4><div class="article-author">{{ post.author.username }}</div></h4>
+                         <div class="article-created-date">{{ post.created_date }}</div>
+                    </div>
+                    <p class="article-text">{{ post.get_excerpt }}</p>
+               </div>
+      </div>
+</body>
+</html>
